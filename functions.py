@@ -1,28 +1,22 @@
 def lesser_of_two_evens(a, b):
-  if a < b:
-    return a
+  if a % 2 == 0 and b % 2 == 0:
+    return min(a,b)
   else:
-    return b
-print(lesser_of_two_evens(2,4))
+    return max(a,b)
+print(lesser_of_two_evens(2,5))
 print ("##############################################################")
 
 def animal_crackers(text):
   word, the_word = text.split(' ')
-  if word[0] == the_word[0]:
-    return True
-  else:
-    return False
-result0 = animal_crackers('Crazy Kangaroo')
+  return word[0] == the_word[0] 
+result0 = animal_crackers('Crazy Cangaroo')
 print(result0)
 print ("##############################################################")
 
 def makes_twenty(num1, num2):
-  if ((num1 or num2) == 20) or ((num1 + num2) == 20):
-    return True
-  else:
-    return False
-result = makes_twenty(2, 3)
-print(result)
+  return num1 == 20 or num2 == 20  or (num1 + num2) == 20
+result = makes_twenty(2, 18)
+print(f'hi {result}')
 print ("##############################################################")
 
 # OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
