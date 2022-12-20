@@ -9,4 +9,3 @@ source = result.content
 
 soup = BeautifulSoup(source, "lxml")
 
-print(soup)
